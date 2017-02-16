@@ -30,9 +30,6 @@
       Refresh
 
 .build-info.build-info-subheader
-  - if @build.succeeded? && !@build.branch_record.convergence?
-    %a.info{:href => show_link_to_create_pull_request(@build), :title => 'create a pull request against master'}
-      Create pull request
   %span.info
     Created
     = timeago(@build.created_at)
